@@ -1,7 +1,7 @@
 import pandas as pd
 # import ast
 import openai
-#from openai.embeddings_utils import cosine_similarity
+from openai.embeddings_utils import cosine_similarity
 import streamlit as st
 
 openai.api_key = st.secrets["mykey"]
@@ -38,7 +38,6 @@ def find_best_answer(user_question):
       return "I apologize, but I don't have information on that topic yet. Could you please ask other questions?"
 
 
-import streamlit as st
 
 st.title("Exercise 2")
 question = st.text_input("Question")
