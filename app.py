@@ -2,6 +2,7 @@ import pandas as pd
 # import ast
 import openai
 #from openai.embeddings_utils import cosine_similarity
+import streamlit
 
 openai.api_key = st.secrets["mykey"]
 
