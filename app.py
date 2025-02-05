@@ -1,4 +1,5 @@
 import pandas as pd
+import ast
 import openai
 from openai.embeddings_utils import cosine_similarity
 
@@ -9,7 +10,7 @@ def get_embedding(text, model="text-embedding-ada-002"):
    return openai.Embedding.create(input = [text], model=model)['data'][0]['embedding']
 
 
-import ast
+
 df = pd.read_csv("qa_dataset_with_embeddings.csv")
 
 # Convert the string embeddings back to lists
