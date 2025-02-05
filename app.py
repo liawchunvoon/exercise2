@@ -1,5 +1,5 @@
 import pandas as pd
-import ast
+# import ast
 import openai
 from openai.embeddings_utils import cosine_similarity
 
@@ -14,7 +14,7 @@ def get_embedding(text, model="text-embedding-ada-002"):
 df = pd.read_csv("qa_dataset_with_embeddings.csv")
 
 # Convert the string embeddings back to lists
-df['Question_Embedding'] = df['Question_Embedding'].apply(ast.literal_eval)
+# df['Question_Embedding'] = df['Question_Embedding'].apply(ast.literal_eval)
 
 def find_best_answer(user_question):
    # Get embedding for the user's question
